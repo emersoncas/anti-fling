@@ -1,0 +1,13 @@
+-- This script is made by Roblox200001TA 
+-- What it does is disable the animation where you are not able to move until you get up
+-- What it can't do is disable flinging entirely, it justs disabled said animation
+-- Try getting into walls with Noclip and you might find the difference
+
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
+humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
+humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp, false)
